@@ -1,0 +1,26 @@
+#---
+#server:
+#  port:8001
+#spring:
+#  profiles: dev
+#---
+#server:
+#  port:8002
+#spring:
+#  profiles: test
+#---
+#server:
+#  port:8003
+#spring:
+#  profiles: pro
+#---
+#
+##spring:
+##  application:
+##    name: Main
+##  profiles:
+##    active: test
+#spring:
+#  config:
+#    activate:
+#      on-profile: test
