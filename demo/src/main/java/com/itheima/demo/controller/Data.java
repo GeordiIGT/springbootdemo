@@ -1,9 +1,9 @@
 package com.itheima.demo.controller;
 
 public class Data {
-    private String name;
-    private int id;
-    private String address;
+    public String name;
+    public int id;
+    public String address;
 
     public Data(String name, int id, String address) {
         this.name = name;

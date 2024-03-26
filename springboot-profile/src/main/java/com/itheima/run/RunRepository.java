@@ -14,6 +14,12 @@ public class RunRepository {
         return runs;
     }
 
+    Run findById(Integer id) {
+        return runs.stream()
+                .filter(run -> run.id() == id)
+                .findFirst()
+                .get();
+    }
     @PostConstruct
     private void init() {
         runs.add(new Run(1, "First run", LocalDateTime.now(), LocalDateTime.now().plusHours(1), 5, Location.OUTDOOR));

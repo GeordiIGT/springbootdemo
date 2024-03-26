@@ -1,8 +1,8 @@
 package com.itheima.demo.controller;
 
 public class SpinResponse {
-    private int[] result;
-    private int wins;
+    public int[] result;
+    public int wins;
 
     public SpinResponse() {
         this.result = new int[3];

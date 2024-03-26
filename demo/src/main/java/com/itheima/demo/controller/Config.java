@@ -14,6 +14,6 @@ public class Config {
         return address;
     }
 
-    private List<String> address = new ArrayList<>();
+    public List<String> address = new ArrayList<>();
 
 }
