@@ -2,6 +2,7 @@ package com.itheima;
 
 import com.itheima.run.Location;
 import com.itheima.run.Run;
+import com.itheima.streamsDemo.StreamDemo1;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -9,9 +10,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
+import java.util.*;
 
 @SpringBootApplication//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 @RestController
@@ -29,7 +30,16 @@ public class Main {
         log.error("Error: This is an error message!");*/
         log.info("Run: {}", run);
 
+        StreamDemo1 demo1 = new StreamDemo1();
+        demo1.test4();
 
+
+    }
+
+    /**
+     * 测试字符串的比较
+     */
+    private void test1() {
         String a = "hello2";
         final String b = "hello";
         String d = "hello";
@@ -49,7 +59,6 @@ public class Main {
         System.out.println((e.equals("hello" + 2))); //这个是比较值， 而不是内存地址。
 
 
-
         //非常好的一个用来测试短路与短路或的例子。
         int aa = 10;
         int bb = 10;
@@ -57,8 +66,32 @@ public class Main {
         System.out.println("result = " + result + ", aa = " + aa + ", bb = " + bb);
         result = (aa < 10) & (bb++ < 10);
         System.out.println("result = " + result + ", aa = " + aa + ", bb = " + bb);
-
     }
+
+    /**
+     * asList方法的测试
+     */
+    private void test2() {
+        Integer[] arr = {1, 2, 3, 4, 5};
+        int[] arr1 = {1, 2, 3, 4, 5};
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println("arr: " + arr[i] + ", arr1: " + arr1[i]);
+        }
+
+
+        List list = Arrays.asList(arr);
+        List list1 = Arrays.asList(arr1);
+        System.out.println("list.size = " + list.size());
+        System.out.println("list1.size = " + list1.size());
+
+//        list.add(4);
+
+//        for( int i = 0; i < list.size(); i++){
+//            System.out.println("list: "+list.get(i));
+//        }
+    }
+
+
 
     @GetMapping("/home")
     public String home() {
