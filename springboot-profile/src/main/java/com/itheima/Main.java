@@ -3,6 +3,7 @@ package com.itheima;
 import com.itheima.run.Location;
 import com.itheima.run.Run;
 import com.itheima.streamsDemo.StreamDemo1;
+import com.itheima.streamsDemo.StreamTask;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -30,8 +31,10 @@ public class Main {
         log.error("Error: This is an error message!");*/
         log.info("Run: {}", run);
 
-        StreamDemo1 demo1 = new StreamDemo1();
-        demo1.test4();
+//        StreamDemo1 demo1 = new StreamDemo1();
+//        demo1.test4();
+        StreamTask task1 = new StreamTask();
+
 
 
     }
