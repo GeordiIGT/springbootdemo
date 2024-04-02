@@ -24,16 +24,16 @@ public class Main {
         SpringApplication.run(Main.class, args);
         log.info("Application started successfully"); //在dos控制台中输入类似日志的格式， 而不是使用System.out.println这种方式。.
 
-        Run run = new Run(1, "First Run", LocalDateTime.now(), LocalDateTime.now().plus(1, ChronoUnit.HOURS), 5, Location.OUTDOOR);
+//        Run run = new Run(1, "First Run", LocalDateTime.now(), LocalDateTime.now().plus(1, ChronoUnit.HOURS), 5, Location.OUTDOOR);
         /*log.atError().log("First Error: This is an error message");
         log.debug("Debug: This is a debug message!"); //这个输出没有在控制台中显示，因为logging.level.com.root=info这是默认的日志级别配置， 可以在application.properties中配置logging.level.com.root=debug， 从而显示debug级别的日志。
         log.warn("Warning: This is a warning message!!!");
         log.error("Error: This is an error message!");*/
-        log.info("Run: {}", run);
+//        log.info("Run: {}", run);
 
 //        StreamDemo1 demo1 = new StreamDemo1();
 //        demo1.test4();
-        StreamTask task1 = new StreamTask();
+//        StreamTask task1 = new StreamTask();
 
 
 
